@@ -3,38 +3,477 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nekomaneki</title>
+    <title>Nekomaneki - Crafted Digital Experiences</title>
+    <meta
+      name="description"
+      content="Nekomaneki is a creative web studio building elegant, fast websites for modern teams."
+    />
     <style>
       :root {
-        color-scheme: light dark;
-        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        --bg: #f7f8fc;
+        --surface: #ffffff;
+        --primary: #5f56f5;
+        --primary-dark: #443bcf;
+        --text: #171a2c;
+        --muted: #5d6077;
+        --line: #e8eaf4;
+        --shadow: 0 20px 40px rgba(25, 29, 63, 0.1);
       }
 
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
       body {
         margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        background: radial-gradient(circle at top, #f9d3d3, #ffffff 45%);
+        padding: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        color: var(--text);
+        background: var(--bg);
       }
 
-      main {
-        text-align: center;
-        padding: 2rem;
-        border-radius: 1rem;
-        background: rgba(255, 255, 255, 0.75);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1120px, 92vw);
+        margin-inline: auto;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(247, 248, 252, 0.92);
+        border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(6px);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 72px;
+        gap: 1rem;
+      }
+
+      .brand {
+        font-weight: 700;
+        letter-spacing: 0.01em;
+      }
+
+      .brand span {
+        color: var(--primary);
+      }
+
+      .links {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        border-radius: 999px;
+        padding: 0.75rem 1.2rem;
+        font-weight: 600;
+        transition: 0.2s ease;
+        cursor: pointer;
+      }
+
+      .button.primary {
+        background: var(--primary);
+        color: #fff;
+      }
+
+      .button.primary:hover {
+        background: var(--primary-dark);
+      }
+
+      .button.secondary {
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+
+      .hero {
+        padding: 5.5rem 0 4rem;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        border: 1px solid #d9ddff;
+        color: var(--primary-dark);
+        background: #eef0ff;
+        border-radius: 999px;
+        padding: 0.3rem 0.8rem;
+        font-size: 0.82rem;
+        font-weight: 600;
       }
 
       h1 {
-        margin: 0 0 0.5rem;
+        margin: 1rem 0;
+        font-size: clamp(2rem, 4vw, 3.6rem);
+        line-height: 1.1;
+      }
+
+      .hero p {
+        margin: 0 0 2rem;
+        color: var(--muted);
+        font-size: 1.05rem;
+        max-width: 58ch;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+
+      .hero-card {
+        background: linear-gradient(155deg, #5f56f5 0%, #766dfc 70%, #938dff 100%);
+        color: #fff;
+        border-radius: 1.4rem;
+        padding: 1.5rem;
+        box-shadow: var(--shadow);
+      }
+
+      .hero-card h3 {
+        margin-top: 0.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.8rem;
+      }
+
+      .metric {
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 0.9rem;
+        padding: 0.9rem;
+      }
+
+      .metric strong {
+        display: block;
+        font-size: 1.3rem;
+      }
+
+      section {
+        padding: 1rem 0 3.5rem;
+      }
+
+      .section-title {
+        margin-bottom: 1.2rem;
+      }
+
+      .section-title h2 {
+        margin: 0;
+        font-size: clamp(1.4rem, 2.2vw, 2.1rem);
+      }
+
+      .section-title p {
+        color: var(--muted);
+        margin-top: 0.5rem;
+      }
+
+      .cards {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        padding: 1.2rem;
+      }
+
+      .card h3 {
+        margin: 0.4rem 0;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .work {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .work-item {
+        border-radius: 1rem;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        overflow: hidden;
+      }
+
+      .work-preview {
+        min-height: 160px;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .work-item:nth-child(1) .work-preview {
+        background-image: linear-gradient(135deg, #1d1f39, #5f56f5);
+      }
+
+      .work-item:nth-child(2) .work-preview {
+        background-image: linear-gradient(135deg, #162a4c, #15b6bf);
+      }
+
+      .work-item:nth-child(3) .work-preview {
+        background-image: linear-gradient(135deg, #3d2036, #f05ea6);
+      }
+
+      .work-item:nth-child(4) .work-preview {
+        background-image: linear-gradient(135deg, #3c3519, #e7bf41);
+      }
+
+      .work-body {
+        padding: 1rem;
+      }
+
+      .about {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .about .card ul {
+        padding-left: 1rem;
+        color: var(--muted);
+        margin: 0.5rem 0 0;
+      }
+
+      .cta {
+        padding: 2rem;
+        border-radius: 1rem;
+        color: #fff;
+        background: linear-gradient(135deg, #564df4, #00a9b5);
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        padding: 1.2rem 0 2rem;
+        font-size: 0.95rem;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid,
+        .cards,
+        .work,
+        .about {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .menu-toggle {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 0.6rem;
+          border: 1px solid var(--line);
+          background: #fff;
+          padding: 0.35rem 0.6rem;
+        }
+
+        .links {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 72px;
+          border-bottom: 1px solid var(--line);
+          background: #fff;
+          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 1rem 4vw;
+        }
+
+        .links.open {
+          display: flex;
+        }
       }
     </style>
   </head>
   <body>
-    <main>
-      <h1>Nekomaneki</h1>
-      <p>Your Vercel deployment is working.</p>
+    <header>
+      <div class="container nav">
+        <a class="brand" href="#top">Neko<span>maneki</span></a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">Menu</button>
+        <nav class="links" id="navLinks">
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#contact" class="button primary">Start a Project</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="eyebrow">Web Design and Development Studio</span>
+            <h1>Beautiful websites that load fast and convert better.</h1>
+            <p>
+              Nekomaneki helps startups and growing brands launch websites that feel premium, perform on every
+              device, and support business growth from day one.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="button primary">Book a Free Consultation</a>
+              <a href="#work" class="button secondary">View Recent Work</a>
+            </div>
+          </div>
+          <aside class="hero-card" aria-label="Highlights">
+            <h3>Why teams pick us</h3>
+            <div class="metric-grid">
+              <div class="metric">
+                <strong>98%</strong>
+                <span>client satisfaction</span>
+              </div>
+              <div class="metric">
+                <strong>1.2s</strong>
+                <span>avg load speed</span>
+              </div>
+              <div class="metric">
+                <strong>42+</strong>
+                <span>sites launched</span>
+              </div>
+              <div class="metric">
+                <strong>24/7</strong>
+                <span>project visibility</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="container">
+          <div class="section-title">
+            <h2>Services</h2>
+            <p>From idea to launch, we cover the full website lifecycle.</p>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <h3>Brand Websites</h3>
+              <p>High-converting marketing sites tailored to your voice and goals.</p>
+            </article>
+            <article class="card">
+              <h3>Landing Pages</h3>
+              <p>Campaign-ready pages optimized for clarity, speed, and action.</p>
+            </article>
+            <article class="card">
+              <h3>Ongoing Growth</h3>
+              <p>Iteration support using analytics, A/B tests, and UX improvements.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="work">
+        <div class="container">
+          <div class="section-title">
+            <h2>Selected Work</h2>
+            <p>Examples of layouts and identities we can build for your team.</p>
+          </div>
+          <div class="work">
+            <article class="work-item">
+              <div class="work-preview"></div>
+              <div class="work-body">
+                <h3>Northlight SaaS</h3>
+                <p>Conversion-focused website with integrated docs and onboarding journey.</p>
+              </div>
+            </article>
+            <article class="work-item">
+              <div class="work-preview"></div>
+              <div class="work-body">
+                <h3>Harbor Fintech</h3>
+                <p>Trust-driven redesign featuring clear product education and social proof.</p>
+              </div>
+            </article>
+            <article class="work-item">
+              <div class="work-preview"></div>
+              <div class="work-body">
+                <h3>Bloom Creative</h3>
+                <p>Portfolio-led showcase highlighting services, process, and outcomes.</p>
+              </div>
+            </article>
+            <article class="work-item">
+              <div class="work-preview"></div>
+              <div class="work-body">
+                <h3>Atlas Health</h3>
+                <p>Accessible multi-page experience with patient resources and booking flow.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container about">
+          <article class="card">
+            <h3>Our Approach</h3>
+            <p>We blend strategy, design, and engineering so every page supports measurable business goals.</p>
+            <ul>
+              <li>Discovery workshops to clarify scope.</li>
+              <li>Design systems for consistent brand expression.</li>
+              <li>Performance-first frontend implementation.</li>
+            </ul>
+          </article>
+          <article class="cta" id="contact">
+            <h3>Ready to build your next website?</h3>
+            <p>
+              Send a short brief and we will respond with a tailored plan, timeline, and estimated scope.
+            </p>
+            <a class="button secondary" href="mailto:hello@nekomaneki.example">hello@nekomaneki.example</a>
+          </article>
+        </div>
+      </section>
     </main>
+
+    <footer>
+      <div class="container">© <span id="year"></span> Nekomaneki. Built for speed and clarity.</div>
+    </footer>
+
+    <script>
+      const menuButton = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+      const year = document.getElementById("year");
+
+      menuButton?.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+      });
+
+      year.textContent = String(new Date().getFullYear());
+    </script>
   </body>
 </html>
