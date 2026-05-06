@@ -82,19 +82,10 @@
         justify-content: flex-end;
       }
 
-      .icon-links a,
-      .menu-button {
+      .icon-links a {
         font-size: 0.76rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-      }
-
-      .menu-button {
-        border: 0;
-        background: transparent;
-        padding: 0;
-        cursor: pointer;
-        justify-self: flex-start;
       }
 
       .categories {
@@ -444,7 +435,7 @@
 
     <header>
       <div class="container top-nav">
-        <button class="menu-button" id="menuButton" aria-label="Toggle menu">Menu</button>
+        <div aria-hidden="true"></div>
         <a class="brand" href="#top">NEKOMANEKI</a>
         <div class="icon-links">
           <a href="#new-in">Shop</a>
@@ -623,14 +614,7 @@
     </footer>
 
     <script>
-      const menuButton = document.getElementById("menuButton");
-      const mobileMenu = document.getElementById("mobileMenu");
       const year = document.getElementById("year");
-
-      menuButton.addEventListener("click", () => {
-        const isVisible = mobileMenu.style.display === "block";
-        mobileMenu.style.display = isVisible ? "none" : "block";
-      });
 
       year.textContent = String(new Date().getFullYear());
     </script>
