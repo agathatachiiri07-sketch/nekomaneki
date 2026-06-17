@@ -58,8 +58,17 @@ header {
 }
 
 .brand {
-  font-size: 1.28rem;
-  letter-spacing: 0.14em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.brand-logo {
+  display: block;
+  width: clamp(148px, 24vw, 220px);
+  height: auto;
+  filter: invert(1);
 }
 
 .icon-links {
