@@ -1,64 +1,60 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nekomaneki | Contact</title>
-    <meta name="description" content="Contact Nekomaneki for store support, media inquiries, and collaborations." />
+    <title>CONTACT | NEKOMANEKI</title>
+    <meta name="description" content="Contact NEKOMANEKI." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&family=Shippori+Mincho:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="notice">Line coupon | 500 yen present</div>
-    <header>
-      <div class="container top-nav">
-        <div class="spacer" aria-hidden="true"></div>
-        <a class="brand" href="index.html">NEKOMANEKI</a>
-        <div class="icon-links">
-          <a href="index.html">Home</a>
-          <a href="news.html">News</a>
-          <a class="active" href="contact.html">Contact</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="NEKOMANEKI home">
+          <span class="brand-text">NEKO<span class="brand-mon" aria-hidden="true"></span>MANEKI</span>
+        </a>
+        <nav class="primary-nav" aria-label="メインナビゲーション">
+          <a href="index.html#about">ABOUT</a>
+          <a href="index.html#product">PRODUCT</a>
+          <a href="index.html#size">SIZE</a>
+          <a href="index.html#story">STORY</a>
+          <a href="index.html#news">NEWS</a>
+        </nav>
+        <div class="header-actions">
+          <a href="account.html" aria-label="Account" class="icon-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 19.2c1.6-3.2 4-4.8 6.5-4.8s4.9 1.6 6.5 4.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+          <a href="shop.html" aria-label="Shopping bag" class="icon-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8.5h10l-.7 10.2a1.5 1.5 0 0 1-1.5 1.4H9.2a1.5 1.5 0 0 1-1.5-1.4L7 8.5Z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M9.2 8.5V7.4a2.8 2.8 0 0 1 5.6 0v1.1" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+          <button type="button" class="menu-toggle" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span></button>
         </div>
       </div>
-      <nav class="categories container" aria-label="Main categories">
-        <a href="index.html">HOME</a>
-        <a href="about.html">ABOUT</a>
-        <a href="news.html">NEWS</a>
-        <a href="online-store.html">ONLINE STORE</a>
-        <a class="active" href="contact.html">CONTACT</a>
-      </nav>
     </header>
 
-    <main class="container">
+    <main class="page-main">
       <section class="page-hero">
-        <p class="kicker">Contact</p>
-        <h1>Get in touch</h1>
-        <p class="lede">
-          Questions about orders, store visits, collaborations, or press? Reach out and our team will get back to you.
-        </p>
+        <p class="kicker">SUPPORT</p>
+        <h1>CONTACT</h1>
+        <p class="lede">ご質問・取材・取り扱いに関するお問い合わせはこちらから。</p>
       </section>
 
-      <section class="card two-column">
-        <article>
-          <h2 class="section-title">Customer support</h2>
-          <p class="text-block">
-            Email: support@nekomaneki.example<br />
-            Hours: Mon-Sun 12:00-21:00 (JST)<br />
-            Expected response: within 1-2 business days.
-          </p>
-        </article>
-        <article>
-          <h2 class="section-title">Store address</h2>
-          <p class="text-block">
-            5-4-40 Minamiaoyama, Minato-ku, Tokyo 107-0062<br />
-            Open daily 12:00-21:00<br />
-            Instagram: @nekomaneki.store
-          </p>
-        </article>
-      </section>
+      <form class="form-grid" action="#" method="post">
+        <label class="field">NAME<input type="text" name="name" autocomplete="name" /></label>
+        <label class="field">EMAIL<input type="email" name="email" autocomplete="email" /></label>
+        <label class="field">MESSAGE<textarea name="message"></textarea></label>
+        <button class="button" type="submit">SEND</button>
+      </form>
     </main>
 
-    <footer>
-      <div class="container">© <span data-year></span> Nekomaneki</div>
+    <footer class="site-footer">
+      <p class="copyright">© <span data-year></span> NEKOMANEKI</p>
     </footer>
     <script src="script.js"></script>
   </body>

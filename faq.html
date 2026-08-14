@@ -1,69 +1,65 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nekomaneki | FAQ</title>
-    <meta name="description" content="Frequently asked questions for Nekomaneki store." />
+    <title>FAQ | NEKOMANEKI</title>
+    <meta name="description" content="FAQ for NEKOMANEKI." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&family=Shippori+Mincho:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="notice">Line coupon | 500 yen present</div>
-
-    <header>
-      <div class="container top-nav">
-        <div class="spacer" aria-hidden="true"></div>
-        <a class="brand" href="index.html">NEKOMANEKI</a>
-        <div class="icon-links">
-          <a href="shop.html">Shop</a>
-          <a class="active" href="faq.html">Faq</a>
-          <a href="account.html">Account</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="NEKOMANEKI home">
+          <span class="brand-text">NEKO<span class="brand-mon" aria-hidden="true"></span>MANEKI</span>
+        </a>
+        <nav class="primary-nav" aria-label="メインナビゲーション">
+          <a href="index.html#about">ABOUT</a>
+          <a href="index.html#product">PRODUCT</a>
+          <a href="index.html#size">SIZE</a>
+          <a href="index.html#story">STORY</a>
+          <a href="index.html#news">NEWS</a>
+        </nav>
+        <div class="header-actions">
+          <a href="account.html" aria-label="Account" class="icon-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 19.2c1.6-3.2 4-4.8 6.5-4.8s4.9 1.6 6.5 4.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+          <a href="shop.html" aria-label="Shopping bag" class="icon-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8.5h10l-.7 10.2a1.5 1.5 0 0 1-1.5 1.4H9.2a1.5 1.5 0 0 1-1.5-1.4L7 8.5Z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M9.2 8.5V7.4a2.8 2.8 0 0 1 5.6 0v1.1" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+          <button type="button" class="menu-toggle" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span></button>
         </div>
       </div>
-      <nav class="categories container" aria-label="Main categories">
-        <a href="new-in.html">New In</a>
-        <a href="about.html">About</a>
-        <a href="best-seller.html">Best Seller</a>
-        <a href="spring-summer.html">Spring Summer</a>
-        <a href="signature.html">Signature</a>
-      </nav>
     </header>
 
-    <main class="container">
+    <main class="page-main">
       <section class="page-hero">
-        <p class="kicker">Help center</p>
-        <h1>Frequently asked questions</h1>
-        <p class="lede">Quick answers for payment, shipping, and membership details.</p>
+        <p class="kicker">SUPPORT</p>
+        <h1>FAQ</h1>
       </section>
 
-      <section class="card">
-        <h2 class="section-title">FAQ</h2>
-        <details open>
-          <summary>Payment methods</summary>
-          <p>We accept AMEX, MasterCard, VISA, JCB, Apple Pay, Google Pay, Shop Pay, and PayPay.</p>
-        </details>
-        <details>
-          <summary>Shipping and delivery</summary>
-          <p>
-            Domestic shipping is 890 JPY and international shipping is 5,000 JPY. Standard orders ship within 7
-            business days.
-          </p>
-        </details>
-        <details>
-          <summary>Pre-order items</summary>
-          <p>
-            If your order includes multiple pre-order products, we ship together based on the latest availability date.
-          </p>
-        </details>
-        <details>
-          <summary>Membership program</summary>
-          <p>Members receive rank-based rewards, early access drops, and exclusive limited edition releases.</p>
-        </details>
-      </section>
+      <details open>
+        <summary>配送について</summary>
+        <p>ご注文確定後、通常 3〜7 営業日以内に発送いたします。</p>
+      </details>
+      <details>
+        <summary>サイズの選び方</summary>
+        <p>S は手元に置くギフト向き、M は棚や玄関、L は空間の主役としておすすめです。</p>
+      </details>
+      <details>
+        <summary>お手入れ方法</summary>
+        <p>柔らかい布で乾拭きしてください。水洗いや強い衝撃はお避けください。</p>
+      </details>
     </main>
 
-    <footer>
-      <div class="container">© <span data-year></span> Nekomaneki</div>
+    <footer class="site-footer">
+      <p class="copyright">© <span data-year></span> NEKOMANEKI</p>
     </footer>
     <script src="script.js"></script>
   </body>

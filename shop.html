@@ -1,50 +1,74 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nekomaneki | Shop</title>
-    <meta name="description" content="Shop the latest Nekomaneki collections." />
+    <title>SHOP | NEKOMANEKI</title>
+    <meta name="description" content="Shop YUMENEKO from NEKOMANEKI." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&family=Shippori+Mincho:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="notice">Line coupon | 500 yen present</div>
-    <header>
-      <div class="container top-nav">
-        <div class="spacer" aria-hidden="true"></div>
-        <a class="brand" href="index.html">NEKOMANEKI</a>
-        <div class="icon-links">
-          <a class="active" href="shop.html">Shop</a>
-          <a href="faq.html">Faq</a>
-          <a href="account.html">Account</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="NEKOMANEKI home">
+          <span class="brand-text">NEKO<span class="brand-mon" aria-hidden="true"></span>MANEKI</span>
+        </a>
+        <nav class="primary-nav" aria-label="メインナビゲーション">
+          <a href="index.html#about">ABOUT</a>
+          <a href="index.html#product">PRODUCT</a>
+          <a href="index.html#size">SIZE</a>
+          <a href="index.html#story">STORY</a>
+          <a href="index.html#news">NEWS</a>
+        </nav>
+        <div class="header-actions">
+          <a href="account.html" aria-label="Account" class="icon-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 19.2c1.6-3.2 4-4.8 6.5-4.8s4.9 1.6 6.5 4.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+          <a href="shop.html" aria-label="Shopping bag" class="icon-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8.5h10l-.7 10.2a1.5 1.5 0 0 1-1.5 1.4H9.2a1.5 1.5 0 0 1-1.5-1.4L7 8.5Z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M9.2 8.5V7.4a2.8 2.8 0 0 1 5.6 0v1.1" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+          <button type="button" class="menu-toggle" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span></button>
         </div>
       </div>
-      <nav class="categories container" aria-label="Main categories">
-        <a href="new-in.html">New In</a>
-        <a href="about.html">About</a>
-        <a href="best-seller.html">Best Seller</a>
-        <a href="spring-summer.html">Spring Summer</a>
-        <a href="signature.html">Signature</a>
-      </nav>
     </header>
-    <main class="container">
+
+    <main class="page-main">
       <section class="page-hero">
-        <p class="kicker">Shop All</p>
-        <h1>Browse every collection</h1>
-        <p class="lede">A curated edit of new arrivals, signature styles, and restocked favorites.</p>
+        <p class="kicker">PRODUCT</p>
+        <h1>YUMENEKO</h1>
+        <p class="lede">サイズを選んで、願いをかたちに。</p>
       </section>
-      <section class="card">
-        <h2 class="section-title">Featured products</h2>
-        <div class="product-grid">
-          <article class="product-card"><div class="mock-image"></div><div class="product-body"><h3>Aster Dress</h3><p>$403.00</p></div></article>
-          <article class="product-card"><div class="mock-image"></div><div class="product-body"><h3>Delphinium Top</h3><p>$258.00</p></div></article>
-          <article class="product-card"><div class="mock-image"></div><div class="product-body"><h3>TOE Baker Cardigan</h3><p>$230.00</p></div></article>
-          <article class="product-card"><div class="mock-image"></div><div class="product-body"><h3>Venice Balloon Skirt</h3><p>$210.00</p></div></article>
-        </div>
+
+      <section class="size-grid" style="align-items: start">
+        <article class="size-item">
+          <p class="size-name">S</p>
+          <p class="size-meta">H 10cm</p>
+          <p class="size-price">¥6,900</p>
+          <div class="size-visual size-s" role="img" aria-label="YUMENEKO Sサイズ"></div>
+        </article>
+        <article class="size-item">
+          <p class="size-name">M</p>
+          <p class="size-meta">H 18cm</p>
+          <p class="size-price">¥11,000</p>
+          <div class="size-visual size-m" role="img" aria-label="YUMENEKO Mサイズ"></div>
+        </article>
+        <article class="size-item">
+          <p class="size-name">L</p>
+          <p class="size-meta">H 24cm</p>
+          <p class="size-price">¥22,000</p>
+          <div class="size-visual size-l" role="img" aria-label="YUMENEKO Lサイズ"></div>
+        </article>
       </section>
     </main>
-    <footer>
-      <div class="container">© <span data-year></span> Nekomaneki</div>
+
+    <footer class="site-footer">
+      <p class="copyright">© <span data-year></span> NEKOMANEKI</p>
     </footer>
     <script src="script.js"></script>
   </body>
