@@ -103,38 +103,12 @@ button {
   justify-self: start;
 }
 
-.brand-text {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.12em;
-  font-family: var(--font-en);
-  font-weight: 200;
-  font-size: 1.05rem;
-  letter-spacing: 0.2em;
-  color: var(--text);
-}
-
-.brand-mon {
-  width: 0.78em;
-  height: 0.78em;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-  position: relative;
-  flex: 0 0 auto;
-  opacity: 0.7;
-}
-
-.brand-mon::before,
-.brand-mon::after {
-  content: "";
-  position: absolute;
-  inset: 18%;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-}
-
-.brand-mon::after {
-  inset: 32%;
+.brand-mark {
+  display: block;
+  height: 1.55rem;
+  width: auto;
+  max-width: min(240px, 48vw);
+  object-fit: contain;
 }
 
 .primary-nav {
@@ -869,8 +843,8 @@ h2 {
   align-items: start;
 }
 
-.footer-brand .brand-text {
-  font-size: 0.95rem;
+.footer-brand .brand-mark {
+  height: 1.2rem;
 }
 
 .footer-nav {
