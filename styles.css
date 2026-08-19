@@ -481,11 +481,12 @@ h2 {
 .size-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1.25rem, 3vw, 2.25rem);
+  gap: clamp(1.5rem, 3.2vw, 3.25rem);
   align-items: stretch;
-  max-width: 920px;
+  width: calc(100% - clamp(1.25rem, 3.5vw, 3rem));
+  max-width: none;
   margin-inline: auto;
-  padding-block: 1.25rem 0.5rem;
+  padding-block: 1.5rem 0.75rem;
 }
 
 .size-card {
@@ -495,7 +496,7 @@ h2 {
   text-align: center;
   background: var(--white);
   border: 1px solid var(--line);
-  padding: 1.15rem 1.15rem 1.4rem;
+  padding: clamp(1.4rem, 2.4vw, 2rem) clamp(1.2rem, 2vw, 1.75rem) clamp(1.6rem, 2.6vw, 2.2rem);
   box-shadow: 0 18px 40px rgba(60, 40, 35, 0.08);
   transform-origin: center bottom;
   transition:
@@ -527,8 +528,8 @@ h2 {
 
 .size-card-media {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  margin-bottom: 1.35rem;
+  aspect-ratio: 3 / 4;
+  margin-bottom: 1.6rem;
   background:
     radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, transparent 46%),
     linear-gradient(160deg, #f1ebe7 0%, #ddd4cd 55%, #efe9e4 100%);
@@ -563,35 +564,35 @@ h2 {
 }
 
 .size-card-media--s {
-  --cat-w: 34%;
-  --knot-w: 16%;
-  --knot-offset: 1.7rem;
+  --cat-w: 38%;
+  --knot-w: 18%;
+  --knot-offset: 2.2rem;
 }
 
 .size-card-media--m {
-  --cat-w: 44%;
-  --knot-w: 22%;
-  --knot-offset: 2.3rem;
+  --cat-w: 50%;
+  --knot-w: 24%;
+  --knot-offset: 3rem;
 }
 
 .size-card-media--l {
-  --cat-w: 56%;
-  --knot-w: 28%;
-  --knot-offset: 3rem;
+  --cat-w: 64%;
+  --knot-w: 32%;
+  --knot-offset: 3.8rem;
 }
 
 .size-card-price {
   margin: 0;
   font-family: var(--font-jp);
   font-weight: 500;
-  font-size: clamp(1.7rem, 2.6vw, 2.15rem);
+  font-size: clamp(2rem, 3.4vw, 2.85rem);
   letter-spacing: 0.04em;
   line-height: 1;
 }
 
 .size-card-desc {
-  margin: 0.85rem 0 0;
-  max-width: 16rem;
+  margin: 0.95rem 0 0;
+  max-width: 18rem;
   font-family: var(--font-en);
   font-weight: 300;
   font-size: 0.62rem;
@@ -1026,7 +1027,7 @@ h2 {
 }
 
 .page-main--wide {
-  width: min(980px, calc(100% - 3rem));
+  width: min(100% - 2rem, 1440px);
 }
 
 .page-hero {
@@ -1149,9 +1150,9 @@ details p {
   }
 
   .size-grid {
-    max-width: 420px;
+    width: calc(100% - 2rem);
     grid-template-columns: 1fr;
-    gap: 1.75rem;
+    gap: 2rem;
   }
 
   .size-card--left,
