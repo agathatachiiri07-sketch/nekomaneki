@@ -481,12 +481,12 @@ h2 {
 .size-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1.5rem, 3.2vw, 3.25rem);
+  gap: clamp(1.75rem, 4vw, 3.5rem);
   align-items: stretch;
-  width: calc(100% - clamp(1.25rem, 3.5vw, 3rem));
+  width: min(1080px, calc(100% - clamp(2rem, 6vw, 5rem)));
   max-width: none;
   margin-inline: auto;
-  padding-block: 1.5rem 0.75rem;
+  padding-block: 1.25rem 0.5rem;
 }
 
 .size-card {
@@ -496,7 +496,7 @@ h2 {
   text-align: center;
   background: var(--white);
   border: 1px solid var(--line);
-  padding: clamp(1.4rem, 2.4vw, 2rem) clamp(1.2rem, 2vw, 1.75rem) clamp(1.6rem, 2.6vw, 2.2rem);
+  padding: 1.05rem 1.05rem 1.25rem;
   box-shadow: 0 18px 40px rgba(60, 40, 35, 0.08);
   transform-origin: center bottom;
   transition:
@@ -528,71 +528,33 @@ h2 {
 
 .size-card-media {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  margin-bottom: 1.6rem;
-  background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.95) 0%, transparent 46%),
-    linear-gradient(160deg, #f1ebe7 0%, #ddd4cd 55%, #efe9e4 100%);
+  aspect-ratio: 4 / 5;
+  margin-bottom: 1.1rem;
+  background: #f3f1ef;
   position: relative;
   overflow: hidden;
 }
 
-.size-card-media::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 54%;
-  translate: -50% -50%;
-  width: var(--cat-w, 42%);
-  aspect-ratio: 0.78;
-  border-radius: 48% 48% 42% 42%;
-  background:
-    radial-gradient(circle at 50% 28%, #fff 0%, #f4f0ed 55%, #e6dfda 100%);
-  box-shadow: 0 16px 28px rgba(80, 60, 50, 0.1);
-}
-
-.size-card-media::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: calc(54% - var(--knot-offset, 2.4rem));
-  width: var(--knot-w, 22%);
-  height: 0.45rem;
-  translate: -50% 0;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #c48b8b, #8fad84, #c48b8b);
-}
-
-.size-card-media--s {
-  --cat-w: 38%;
-  --knot-w: 18%;
-  --knot-offset: 2.2rem;
-}
-
-.size-card-media--m {
-  --cat-w: 50%;
-  --knot-w: 24%;
-  --knot-offset: 3rem;
-}
-
-.size-card-media--l {
-  --cat-w: 64%;
-  --knot-w: 32%;
-  --knot-offset: 3.8rem;
+.size-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
 }
 
 .size-card-price {
   margin: 0;
   font-family: var(--font-jp);
   font-weight: 500;
-  font-size: clamp(2rem, 3.4vw, 2.85rem);
+  font-size: clamp(1.55rem, 2.4vw, 2.05rem);
   letter-spacing: 0.04em;
   line-height: 1;
 }
 
 .size-card-desc {
-  margin: 0.95rem 0 0;
-  max-width: 18rem;
+  margin: 0.7rem 0 0;
+  max-width: 16rem;
   font-family: var(--font-en);
   font-weight: 300;
   font-size: 0.62rem;
@@ -603,7 +565,7 @@ h2 {
 
 .size-card-cta {
   margin-top: auto;
-  padding-top: 1.35rem;
+  padding-top: 1.05rem;
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
@@ -1150,9 +1112,9 @@ details p {
   }
 
   .size-grid {
-    width: calc(100% - 2rem);
+    width: min(420px, calc(100% - 2rem));
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.75rem;
   }
 
   .size-card--left,
