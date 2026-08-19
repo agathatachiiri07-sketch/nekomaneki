@@ -825,7 +825,7 @@ h2 {
 .palette {
   position: relative;
   z-index: 1;
-  width: min(46rem, 92vw);
+  width: min(52rem, 94vw);
   aspect-ratio: 1;
   margin-inline: auto;
 }
@@ -842,19 +842,17 @@ h2 {
   letter-spacing: 0.08em;
   color: #3f3733;
   text-shadow: 0 8px 30px rgba(255, 255, 255, 0.35);
+  pointer-events: none;
 }
 
 .swatch {
-  --r: min(38%, 11.5rem);
   position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 8.6rem;
+  width: 9.2rem;
   display: grid;
   justify-items: center;
   gap: 0.45rem;
   text-align: center;
-  transform: translate(-50%, -50%) rotate(var(--angle)) translateY(calc(var(--r) * -1)) rotate(calc(var(--angle) * -1));
+  translate: -50% -50%;
 }
 
 .swatch-name {
