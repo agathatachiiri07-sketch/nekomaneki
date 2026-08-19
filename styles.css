@@ -808,10 +808,11 @@ h2 {
 
 /* Story */
 .story {
-  padding: clamp(4.5rem, 10vw, 7rem) 0;
+  position: relative;
+  z-index: 1;
+  padding: clamp(6rem, 12vw, 8.5rem) 0 clamp(4.5rem, 10vw, 7rem);
   background:
-    linear-gradient(180deg, var(--bg-soft), #faf8f7 40%, var(--bg));
-  border-block: 1px solid var(--line);
+    linear-gradient(180deg, #faf8f7, var(--bg-soft) 40%, var(--bg));
 }
 
 .story-layout {
@@ -1359,6 +1360,10 @@ details p {
     align-items: center;
     text-align: center;
     gap: 0.35rem;
+  }
+
+  .size {
+    background-attachment: scroll;
   }
 
   .gallery-stage {
