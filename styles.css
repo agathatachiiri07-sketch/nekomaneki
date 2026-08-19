@@ -343,8 +343,11 @@ h2 {
 
 /* Gallery */
 .gallery {
+  position: relative;
+  z-index: 3;
   background: #f3eee8;
-  padding: clamp(4rem, 9vw, 7.5rem) 0 clamp(5rem, 11vw, 8.5rem);
+  padding: clamp(4rem, 9vw, 7.5rem) 0 clamp(6.5rem, 12vw, 9.5rem);
+  margin-bottom: -4.5rem;
 }
 
 .gallery-stage {
@@ -491,6 +494,38 @@ h2 {
   line-height: 1.75;
 }
 
+.torn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: clamp(4.5rem, 8vw, 6.5rem);
+  pointer-events: none;
+  z-index: 5;
+  line-height: 0;
+}
+
+.torn img,
+.torn svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.torn--bottom {
+  bottom: -1px;
+  filter: drop-shadow(0 10px 14px rgba(70, 45, 38, 0.12));
+}
+
+.torn--on-photo {
+  --torn-fill: #faf8f7;
+  filter: drop-shadow(0 12px 16px rgba(40, 24, 20, 0.22));
+}
+
+.torn--on-photo img {
+  /* recolor cream tear to match the following story paper */
+  filter: brightness(1.04) saturate(0.85);
+}
+
 .concept-item {
   display: grid;
   justify-items: center;
@@ -542,34 +577,31 @@ h2 {
 /* Size */
 .size {
   position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  padding: clamp(4.5rem, 10vw, 7.5rem) 0;
-  background:
-    radial-gradient(780px 420px at 8% 78%, rgba(196, 139, 139, 0.28), transparent 58%),
-    radial-gradient(720px 360px at 96% 18%, rgba(143, 173, 132, 0.2), transparent 52%),
-    radial-gradient(640px 280px at 50% 0%, rgba(255, 255, 255, 0.7), transparent 70%),
-    linear-gradient(180deg, #f4eeea 0%, #e9e0db 46%, #f6f1ee 100%);
-}
-
-.size::before {
-  content: "";
-  position: absolute;
-  inset: 18% -8% 8%;
-  background: url("size-yumeko.jpg") center / min(58vw, 640px) no-repeat;
-  filter: blur(64px) saturate(1.2);
-  opacity: 0.32;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.size > * {
-  position: relative;
   z-index: 1;
+  padding: clamp(8rem, 14vw, 11rem) 0 clamp(6.5rem, 12vw, 9rem);
+  color: #f7f1ec;
+  background-color: #6a5248;
+  background-image:
+    linear-gradient(180deg, rgba(62, 42, 38, 0.28) 0%, rgba(92, 62, 55, 0.18) 42%, rgba(48, 32, 28, 0.34) 100%),
+    url("size-yumeko.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.size-header h2,
+.size-lead {
+  color: #fbf6f1;
+  text-shadow: 0 8px 24px rgba(40, 24, 20, 0.28);
+}
+
+.size-lead {
+  color: rgba(255, 247, 240, 0.82);
 }
 
 .size--page {
-  padding-top: 1.5rem;
+  padding-top: clamp(4.5rem, 10vw, 7.5rem);
 }
 
 .size-header {
@@ -586,9 +618,18 @@ h2 {
 
 .size-lead {
   margin: 0.85rem 0 0;
-  color: var(--muted);
+  color: rgba(255, 247, 240, 0.82);
   font-size: 0.92rem;
   letter-spacing: 0.06em;
+}
+
+.size > * {
+  position: relative;
+  z-index: 1;
+}
+
+.size .torn {
+  z-index: 4;
 }
 
 .size-grid {
