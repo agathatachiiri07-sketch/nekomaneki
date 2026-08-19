@@ -1282,9 +1282,9 @@ details p {
 
   .swatch {
     position: relative;
-    left: auto;
-    top: auto;
-    transform: none;
+    left: auto !important;
+    top: auto !important;
+    translate: none;
     width: auto;
   }
 
