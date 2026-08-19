@@ -1334,6 +1334,11 @@ details p {
     width: auto;
   }
 
+  .swatch-tip {
+    opacity: 1;
+    transform: none;
+  }
+
   .size-grid {
     width: min(420px, calc(100% - 2rem));
     grid-template-columns: 1fr;
