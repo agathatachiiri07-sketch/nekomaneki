@@ -1,83 +1,90 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nekomaneki | News</title>
-    <meta name="description" content="Latest updates, drops, and announcements from Nekomaneki." />
+    <title>NEWS | NEKOMANEKI</title>
+    <meta name="description" content="Latest news from NEKOMANEKI." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&family=Shippori+Mincho:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="notice">Line coupon | 500 yen present</div>
-
-    <header>
-      <div class="container top-nav">
-        <div class="spacer" aria-hidden="true"></div>
-        <a class="brand" href="index.html">NEKOMANEKI</a>
-        <div class="icon-links">
-          <a href="index.html">HOME</a>
-          <a class="active" href="news.html">NEWS</a>
-          <a href="contact.html">CONTACT</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="NEKOMANEKI home">
+          <img
+            class="brand-mark"
+            src="logo-nekomaneki.png"
+            alt="NEKOMANEKI"
+            width="912"
+            height="148"
+          />
+        </a>
+        <nav class="primary-nav" aria-label="メインナビゲーション">
+          <a href="index.html#about">ABOUT</a>
+          <a href="index.html#product">PRODUCT</a>
+          <a href="index.html#size">SIZE</a>
+          <a href="index.html#story">STORY</a>
+          <a href="index.html#news">NEWS</a>
+        </nav>
+        <div class="header-actions">
+          <a href="account.html" aria-label="Account" class="icon-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 19.2c1.6-3.2 4-4.8 6.5-4.8s4.9 1.6 6.5 4.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+          <a href="shop.html" aria-label="Shopping bag" class="icon-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8.5h10l-.7 10.2a1.5 1.5 0 0 1-1.5 1.4H9.2a1.5 1.5 0 0 1-1.5-1.4L7 8.5Z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M9.2 8.5V7.4a2.8 2.8 0 0 1 5.6 0v1.1" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+          <button type="button" class="menu-toggle" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span></button>
         </div>
       </div>
-
-      <nav class="categories container" aria-label="Main categories">
-        <a href="index.html">HOME</a>
-        <a href="about.html">ABOUT</a>
-        <a class="active" href="news.html">NEWS</a>
-        <a href="online-store.html">ONLINE STORE</a>
-        <a href="contact.html">CONTACT</a>
-      </nav>
     </header>
 
-    <main class="container">
+    <main class="page-main">
       <section class="page-hero">
-        <p class="kicker">Latest updates</p>
-        <h1>News</h1>
-        <p class="lede">Discover this week’s announcements, releases, and collection updates.</p>
+        <p class="kicker">NEWS</p>
+        <h1>NEWS</h1>
+        <p class="lede">ブランドからのお知らせとプロダクト情報。</p>
       </section>
 
-      <section class="card">
-        <div class="chip-row">
-          <span class="chip">New Drop</span>
-          <span class="chip">Update</span>
-          <span class="chip">Announcement</span>
-        </div>
-        <div class="product-grid">
-          <article class="product-card">
-            <div class="mock-image"></div>
-            <div class="product-body">
-              <h3>Spring capsule release</h3>
-              <p>May 2026</p>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="mock-image"></div>
-            <div class="product-body">
-              <h3>Tokyo store update</h3>
-              <p>Extended opening hours</p>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="mock-image"></div>
-            <div class="product-body">
-              <h3>Restock alert</h3>
-              <p>Best sellers restocked</p>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="mock-image"></div>
-            <div class="product-body">
-              <h3>Member event</h3>
-              <p>Private preview access</p>
-            </div>
-          </article>
-        </div>
-      </section>
+      <ul class="news-list">
+        <li>
+          <a href="#">
+            <time datetime="2024-05-01">2024.05.01</time>
+            <span class="news-tag">NEWS</span>
+            <span class="news-title">NEKOMANEKI オフィシャルサイトを公開しました</span>
+            <span class="news-chevron" aria-hidden="true">›</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <time datetime="2024-04-18">2024.04.18</time>
+            <span class="news-tag">PRODUCT</span>
+            <span class="news-title">YUMENEKO Mサイズの予約受付を開始</span>
+            <span class="news-chevron" aria-hidden="true">›</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <time datetime="2024-03-22">2024.03.22</time>
+            <span class="news-tag">NEWS</span>
+            <span class="news-title">ブランドコンセプトムービーを公開</span>
+            <span class="news-chevron" aria-hidden="true">›</span>
+          </a>
+        </li>
+      </ul>
     </main>
 
-    <footer>
-      <div class="container">© <span data-year></span> Nekomaneki</div>
+    <footer class="site-footer">
+      <p class="copyright">© <span data-year></span> NEKOMANEKI</p>
     </footer>
     <script src="script.js"></script>
   </body>
