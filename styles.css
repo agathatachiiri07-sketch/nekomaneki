@@ -475,6 +475,11 @@ h2 {
   z-index: 0;
 }
 
+.size > * {
+  position: relative;
+  z-index: 1;
+}
+
 .size--page {
   padding-top: 1.5rem;
 }
