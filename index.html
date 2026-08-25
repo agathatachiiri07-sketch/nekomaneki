@@ -1,74 +1,398 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nekomaneki | Home</title>
+    <title>NEKOMANEKI</title>
     <meta
       name="description"
-      content="Nekomaneki is an editorial-style fashion storefront. Watch the 26 Spring / Summer hero film and explore dedicated pages for HOME, ABOUT, NEWS, ONLINE STORE, and CONTACT."
+      content="NEKOMANEKI — 願いを、かたちに。招き猫とともに届ける記憶・今・未来。"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@200;300;400;500&family=Shippori+Mincho:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="notice">Line coupon | 500 yen present</div>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="NEKOMANEKI home">
+          <img
+            class="brand-mark"
+            src="logo-nekomaneki.png"
+            alt="NEKOMANEKI"
+            width="912"
+            height="148"
+          />
+        </a>
 
-    <header>
-      <div class="container top-nav">
-        <div class="spacer" aria-hidden="true"></div>
-        <a class="brand active" href="index.html">NEKOMANEKI</a>
-        <div class="icon-links">
-          <a class="active" href="index.html">HOME</a>
-          <a href="news.html">NEWS</a>
-          <a href="contact.html">CONTACT</a>
+        <nav class="primary-nav" aria-label="メインナビゲーション">
+          <a href="#about">ABOUT</a>
+          <a href="#product">PRODUCT</a>
+          <a href="#size">SIZE</a>
+          <a href="#story">STORY</a>
+          <a href="#news">NEWS</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="account.html" aria-label="Account" class="icon-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.2" />
+              <path
+                d="M5.5 19.2c1.6-3.2 4-4.8 6.5-4.8s4.9 1.6 6.5 4.8"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </a>
+          <a href="shop.html" aria-label="Shopping bag" class="icon-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M7 8.5h10l-.7 10.2a1.5 1.5 0 0 1-1.5 1.4H9.2a1.5 1.5 0 0 1-1.5-1.4L7 8.5Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+              />
+              <path
+                d="M9.2 8.5V7.4a2.8 2.8 0 0 1 5.6 0v1.1"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </a>
+          <button type="button" class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+            <span></span><span></span>
+          </button>
         </div>
       </div>
-
-      <nav class="categories container" aria-label="Main categories">
-        <a class="active" href="index.html">HOME</a>
-        <a href="about.html">ABOUT</a>
-        <a href="news.html">NEWS</a>
-        <a href="online-store.html">ONLINE STORE</a>
-        <a href="contact.html">CONTACT</a>
-      </nav>
     </header>
 
-    <section class="hero-video" aria-label="Nekomaneki hero video">
-      <video
-        class="hero-video__media"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-        poster="hero-poster.jpg"
-      >
-        <source src="LSMb2UBnoRY3rSEy-CewZC2DqsyrO0Y1Wb1pX5pNe3o.MP4" type="video/mp4" />
-      </video>
-      <div class="hero-video__overlay">
-        <div class="container">
-          <p class="kicker">26 Spring / Summer</p>
-          <h1>Nekomaneki</h1>
+    <main>
+      <section class="hero" aria-label="ヒーロー">
+        <div class="hero-media">
+          <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="hero-poster.jpg"
+          >
+            <source src="LSMb2UBnoRY3rSEy-CewZC2DqsyrO0Y1Wb1pX5pNe3o.MP4" type="video/mp4" />
+          </video>
         </div>
-      </div>
-    </section>
+        <div class="hero-wash" aria-hidden="true"></div>
+        <div class="hero-grain" aria-hidden="true"></div>
 
-    <main class="container">
-      <section class="card">
-        <h2 class="section-title">Quick navigation</h2>
-        <div class="quick-links">
-          <a href="index.html">HOME</a>
-          <a href="about.html">ABOUT</a>
-          <a href="news.html">NEWS</a>
-          <a href="online-store.html">ONLINE STORE</a>
-          <a href="contact.html">CONTACT</a>
+        <div class="hero-copy">
+          <p class="hero-kicker">YUMENEKO</p>
+          <h1 class="hero-brand">NEKOMANEKI</h1>
+          <p class="hero-sub">願いを、かたちに。</p>
+        </div>
+
+        <div class="hero-meta">
+          <p>招き猫とともに届ける縁起</p>
+          <p>UNPROLOGUE</p>
+          <p>記憶 · 今 · 未来</p>
+        </div>
+      </section>
+
+      <section class="gallery reveal" id="concept" aria-labelledby="concept-heading">
+        <h2 id="concept-heading" class="visually-hidden">Concept</h2>
+        <div class="gallery-stage">
+          <article class="gallery-card gallery-card--1">
+            <div class="gallery-card-media gallery-card-media--a"></div>
+            <div class="gallery-card-copy">
+              <p>MEMORY</p>
+              <h3>記憶</h3>
+            </div>
+          </article>
+
+          <article class="gallery-card gallery-card--2">
+            <div class="gallery-card-media gallery-card-media--b"></div>
+            <div class="gallery-card-copy">
+              <p>PRESENT</p>
+              <h3>今</h3>
+            </div>
+          </article>
+
+          <article class="gallery-card gallery-card--3">
+            <div class="gallery-card-media gallery-card-media--c"></div>
+            <div class="gallery-paper">
+              <p class="gallery-paper-kicker">YUMENEKO</p>
+              <p class="gallery-paper-title">Work of luck</p>
+              <p class="gallery-paper-body">
+                水引の結び目に想いを込め、白い招き猫が静かに縁を招きます。
+              </p>
+            </div>
+          </article>
+
+          <article class="gallery-card gallery-card--4">
+            <div class="gallery-card-media gallery-card-media--d"></div>
+            <div class="gallery-card-copy">
+              <p>FUTURE</p>
+              <h3>未来</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="size" id="size" aria-labelledby="size-heading">
+        <div class="container">
+          <header class="size-header">
+            <h2 id="size-heading">Size Options</h2>
+            <p class="size-lead">暮らしに合わせて選ぶ、三つの大きさ。</p>
+          </header>
+        </div>
+
+        <div class="size-grid">
+            <article class="size-card size-card--left">
+              <div class="size-card-media">
+                <img src="size-yumeko.jpg" alt="YUMENEKO Sサイズ" width="1005" height="1256" />
+              </div>
+              <p class="size-card-price">¥6,900</p>
+              <p class="size-card-desc">S SIZE · H 10CM · DESK & GIFT</p>
+              <a class="size-card-cta" href="shop.html">
+                Shop now
+                <span class="size-card-cta-icon" aria-hidden="true"></span>
+              </a>
+            </article>
+
+            <article class="size-card size-card--center">
+              <div class="size-card-media">
+                <img src="size-yumeko.jpg" alt="YUMENEKO Mサイズ" width="1005" height="1256" />
+              </div>
+              <p class="size-card-price">¥11,000</p>
+              <p class="size-card-desc">M SIZE · H 18CM · SHELF & ENTRY</p>
+              <a class="size-card-cta" href="shop.html">
+                Shop now
+                <span class="size-card-cta-icon" aria-hidden="true"></span>
+              </a>
+            </article>
+
+            <article class="size-card size-card--right">
+              <div class="size-card-media">
+                <img src="size-yumeko.jpg" alt="YUMENEKO Lサイズ" width="1005" height="1256" />
+              </div>
+              <p class="size-card-price">¥22,000</p>
+              <p class="size-card-desc">L SIZE · H 24CM · STATEMENT PIECE</p>
+              <a class="size-card-cta" href="shop.html">
+                Shop now
+                <span class="size-card-cta-icon" aria-hidden="true"></span>
+              </a>
+            </article>
+          </div>
+      </section>
+
+      <section class="story reveal" id="story" aria-labelledby="story-heading">
+        <div class="container story-layout">
+          <div class="story-copy">
+            <p class="section-label">BRAND STORY</p>
+            <h2 id="story-heading">結び目に込めた、<br />三つの時間。</h2>
+            <p>
+              すべての夢には、まだ誰も知らない「はじまり」があります。
+              NEKOMANEKI は、日本の招き猫と水引の美意識を現代の暮らしへつなぐブランドです。
+            </p>
+            <p>
+              記憶を尊び、今を慈しみ、未来を招く。
+              一匹の白い猫が、あなたの物語のプロローグを静かに開きます。
+            </p>
+          </div>
+          <div class="story-concepts" aria-hidden="true">
+            <div class="concept-item">
+              <div class="concept-icon">
+                <svg viewBox="0 0 64 64"><path d="M32 10c8 8 14 14 14 22a14 14 0 1 1-28 0c0-8 6-14 14-22Z" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M32 22c4 4 7 7 7 11a7 7 0 1 1-14 0c0-4 3-7 7-11Z" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+              </div>
+              <p class="concept-en">MEMORY</p>
+              <p class="concept-ja">記憶</p>
+            </div>
+            <div class="concept-item">
+              <div class="concept-icon">
+                <svg viewBox="0 0 64 64"><circle cx="32" cy="28" r="10" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M20 48c3.5-7 8-10.5 12-10.5S40.5 41 44 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M38 22c2-3 5-4 7-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+              </div>
+              <p class="concept-en">PRESENT</p>
+              <p class="concept-ja">今</p>
+            </div>
+            <div class="concept-item">
+              <div class="concept-icon">
+                <svg viewBox="0 0 64 64"><circle cx="32" cy="34" r="10" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M32 14v6M32 48v6M14 34h6M44 34h6M19 21l4 4M41 43l4 4M45 21l-4 4M23 43l-4 4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+              </div>
+              <p class="concept-en">FUTURE</p>
+              <p class="concept-ja">未来</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="product reveal" id="product" aria-labelledby="product-heading">
+        <div class="palette" role="list">
+          <h2 class="palette-title" id="product-heading">yumeneko</h2>
+
+          <article class="swatch" role="listitem" style="top: 8%; left: 50%; --tone: #c48b8b">
+            <p class="swatch-name">MIZUHIKI</p>
+            <button type="button" class="swatch-dot" aria-describedby="tip-mizuhiki">
+              <span class="visually-hidden">MIZUHIKI</span>
+            </button>
+            <p class="swatch-tip" id="tip-mizuhiki">結びの美で想いを留める</p>
+          </article>
+
+          <article class="swatch" role="listitem" style="top: 29%; left: 86%; --tone: #eadfd6">
+            <p class="swatch-name">TEXTURE</p>
+            <button type="button" class="swatch-dot" aria-describedby="tip-texture">
+              <span class="visually-hidden">TEXTURE</span>
+            </button>
+            <p class="swatch-tip" id="tip-texture">柔らかな白と繊細な陰影</p>
+          </article>
+
+          <article class="swatch" role="listitem" style="top: 71%; left: 86%; --tone: #8fad84">
+            <p class="swatch-name">EXPRESSION</p>
+            <button type="button" class="swatch-dot" aria-describedby="tip-expression">
+              <span class="visually-hidden">EXPRESSION</span>
+            </button>
+            <p class="swatch-tip" id="tip-expression">穏やかなまなざしと微笑み</p>
+          </article>
+
+          <article class="swatch" role="listitem" style="top: 92%; left: 50%; --tone: #d9b8b0">
+            <p class="swatch-name">FAVORITE FOOD</p>
+            <button type="button" class="swatch-dot" aria-describedby="tip-food">
+              <span class="visually-hidden">FAVORITE FOOD</span>
+            </button>
+            <p class="swatch-tip" id="tip-food">金米糖</p>
+          </article>
+
+          <article class="swatch" role="listitem" style="top: 71%; left: 14%; --tone: #b8a89c">
+            <p class="swatch-name">GO TO PLACE</p>
+            <button type="button" class="swatch-dot" aria-describedby="tip-place">
+              <span class="visually-hidden">GO TO PLACE</span>
+            </button>
+            <p class="swatch-tip" id="tip-place">陽だまりの窓辺</p>
+          </article>
+
+          <article class="swatch" role="listitem" style="top: 29%; left: 14%; --tone: #4a403c">
+            <p class="swatch-name">PERSONALITY</p>
+            <button type="button" class="swatch-dot" aria-describedby="tip-personality">
+              <span class="visually-hidden">PERSONALITY</span>
+            </button>
+            <p class="swatch-tip" id="tip-personality">おだやかで、一途</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="about reveal" id="about" aria-labelledby="about-heading">
+        <div class="container about-layout">
+          <div class="about-copy">
+            <p class="section-label">ABOUT NEKOMANEKI</p>
+            <h2 id="about-heading">日本の文化を、<br />いまの物語へ。</h2>
+            <p class="section-copy">
+              UNPROLOGUE株式会社が手がける NEKOMANEKI は、
+              伝統の美しさをデザインと技術で再解釈し、世界へ届けるブランドです。
+              まだ始まっていない未来の物語を、招き猫とともに形にしていきます。
+            </p>
+            <a href="about.html" class="text-link">VIEW STORY <span aria-hidden="true">→</span></a>
+          </div>
+          <a class="about-media" href="about.html" aria-label="ブランドストーリーを見る">
+            <span class="play-btn" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9 7.5v9l8-4.5-8-4.5Z" fill="currentColor"/></svg>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <section class="news reveal" id="news" aria-labelledby="news-heading">
+        <div class="container">
+          <div class="news-header">
+            <h2 id="news-heading">NEWS</h2>
+            <a href="news.html" class="text-link">VIEW ALL <span aria-hidden="true">→</span></a>
+          </div>
+          <ul class="news-list">
+            <li>
+              <a href="news.html">
+                <time datetime="2024-05-01">2024.05.01</time>
+                <span class="news-tag">NEWS</span>
+                <span class="news-title">NEKOMANEKI オフィシャルサイトを公開しました</span>
+                <span class="news-chevron" aria-hidden="true">›</span>
+              </a>
+            </li>
+            <li>
+              <a href="news.html">
+                <time datetime="2024-04-18">2024.04.18</time>
+                <span class="news-tag">PRODUCT</span>
+                <span class="news-title">YUMENEKO Mサイズの予約受付を開始</span>
+                <span class="news-chevron" aria-hidden="true">›</span>
+              </a>
+            </li>
+            <li>
+              <a href="news.html">
+                <time datetime="2024-03-22">2024.03.22</time>
+                <span class="news-tag">NEWS</span>
+                <span class="news-title">ブランドコンセプトムービーを公開</span>
+                <span class="news-chevron" aria-hidden="true">›</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="container">© <span data-year></span> Nekomaneki</div>
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <a class="brand footer-brand" href="index.html" aria-label="NEKOMANEKI home">
+          <img
+            class="brand-mark"
+            src="logo-nekomaneki.png"
+            alt="NEKOMANEKI"
+            width="912"
+            height="148"
+          />
+        </a>
+
+        <div class="footer-nav">
+          <div>
+            <p>ABOUT</p>
+            <a href="#about">Brand</a>
+            <a href="about.html">Company</a>
+          </div>
+          <div>
+            <p>PRODUCT</p>
+            <a href="#product">YUMENEKO</a>
+            <a href="#size">Size</a>
+          </div>
+          <div>
+            <p>STORY</p>
+            <a href="#story">Concept</a>
+            <a href="#concept">Memory</a>
+          </div>
+          <div>
+            <p>SUPPORT</p>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div class="socials">
+          <a href="https://www.instagram.com/nekomaneki_official/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="17" cy="7" r="0.9" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="X">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+      <p class="copyright">© <span data-year></span> NEKOMANEKI</p>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

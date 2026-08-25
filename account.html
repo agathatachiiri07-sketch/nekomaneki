@@ -1,66 +1,69 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nekomaneki | Account</title>
-    <meta name="description" content="Account login and signup page for Nekomaneki members." />
+    <title>ACCOUNT | NEKOMANEKI</title>
+    <meta name="description" content="Account for NEKOMANEKI." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&family=Shippori+Mincho:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="notice">Line coupon | 500 yen present</div>
-
-    <header>
-      <div class="container top-nav">
-        <div class="spacer" aria-hidden="true"></div>
-        <a class="brand" href="index.html">NEKOMANEKI</a>
-        <div class="icon-links">
-          <a href="shop.html">Shop</a>
-          <a href="faq.html">Faq</a>
-          <a class="active" href="account.html">Account</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="NEKOMANEKI home">
+          <img
+            class="brand-mark"
+            src="logo-nekomaneki.png"
+            alt="NEKOMANEKI"
+            width="912"
+            height="148"
+          />
+        </a>
+        <nav class="primary-nav" aria-label="メインナビゲーション">
+          <a href="index.html#about">ABOUT</a>
+          <a href="index.html#product">PRODUCT</a>
+          <a href="index.html#size">SIZE</a>
+          <a href="index.html#story">STORY</a>
+          <a href="index.html#news">NEWS</a>
+        </nav>
+        <div class="header-actions">
+          <a href="account.html" aria-label="Account" class="icon-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 19.2c1.6-3.2 4-4.8 6.5-4.8s4.9 1.6 6.5 4.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+          <a href="shop.html" aria-label="Shopping bag" class="icon-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8.5h10l-.7 10.2a1.5 1.5 0 0 1-1.5 1.4H9.2a1.5 1.5 0 0 1-1.5-1.4L7 8.5Z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M9.2 8.5V7.4a2.8 2.8 0 0 1 5.6 0v1.1" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+          <button type="button" class="menu-toggle" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span></button>
         </div>
       </div>
-
-      <nav class="categories container" aria-label="Main categories">
-        <a href="new-in.html">New In</a>
-        <a href="about.html">About</a>
-        <a href="best-seller.html">Best Seller</a>
-        <a href="spring-summer.html">Spring Summer</a>
-        <a href="signature.html">Signature</a>
-      </nav>
     </header>
 
-    <main class="container">
+    <main class="page-main">
       <section class="page-hero">
-        <p class="kicker">Member area</p>
-        <h1>Login / Sign Up</h1>
-        <p class="lede">Access faster checkout, order history, and member-only collection drops.</p>
+        <p class="kicker">MEMBER</p>
+        <h1>ACCOUNT</h1>
+        <p class="lede">ログインして注文履歴やお気に入りを管理できます。</p>
       </section>
 
-      <section class="card">
-        <h2 class="section-title">Sign in</h2>
-        <form class="form-grid">
-          <label class="field">Email <input type="email" placeholder="you@example.com" /></label>
-          <label class="field">Password <input type="password" placeholder="********" /></label>
-          <button class="button" type="button">Sign in</button>
-        </form>
-      </section>
-
-      <section class="card">
-        <h2 class="section-title">New customer</h2>
-        <p class="text-block">
-          Create an account to save your profile details, track shipments, and receive launch reminders.
-        </p>
-        <form class="form-grid">
-          <label class="field">Full Name <input type="text" placeholder="Your name" /></label>
-          <label class="field">Email <input type="email" placeholder="you@example.com" /></label>
-          <button class="button" type="button">Create account</button>
-        </form>
-      </section>
+      <form class="form-grid" action="#" method="post">
+        <label class="field">EMAIL<input type="email" name="email" autocomplete="email" /></label>
+        <label class="field">PASSWORD<input type="password" name="password" autocomplete="current-password" /></label>
+        <button class="button" type="submit">SIGN IN</button>
+      </form>
     </main>
 
-    <footer>
-      <div class="container">© <span data-year></span> Nekomaneki</div>
+    <footer class="site-footer">
+      <p class="copyright">© <span data-year></span> NEKOMANEKI</p>
     </footer>
     <script src="script.js"></script>
   </body>
