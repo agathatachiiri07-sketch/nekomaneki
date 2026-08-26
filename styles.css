@@ -934,9 +934,8 @@ h2 {
   display: block;
   min-height: clamp(16rem, 32vw, 22rem);
   background:
-    linear-gradient(180deg, rgba(30, 24, 22, 0.18), rgba(30, 24, 22, 0.28)),
-    url("https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1600&q=80")
-      center / cover no-repeat;
+    linear-gradient(180deg, rgba(30, 24, 22, 0.12), rgba(30, 24, 22, 0.28)),
+    url("IMG_0485.JPG") center / cover no-repeat;
   overflow: hidden;
 }
 
