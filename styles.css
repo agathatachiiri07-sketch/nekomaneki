@@ -1191,6 +1191,126 @@ h2 {
   letter-spacing: 0.16em;
 }
 
+.etymology {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin: 0 0 1.25rem;
+}
+
+.etymology-term {
+  margin: 0;
+  font-family: var(--font-en);
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  font-size: 1.05rem;
+}
+
+.etymology-meta,
+.member-role,
+.member-meta {
+  margin: 0.2rem 0 0;
+  font-family: var(--font-en);
+  font-weight: 300;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.etymology-plus {
+  margin: 0;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.company-profile {
+  margin: 0;
+}
+
+.company-profile > div {
+  display: grid;
+  grid-template-columns: minmax(7.5rem, 10rem) 1fr;
+  gap: 0.8rem 1.2rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.company-profile dt {
+  font-family: var(--font-en);
+  font-weight: 300;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.company-profile dd {
+  margin: 0;
+  line-height: 1.8;
+}
+
+.company-profile a {
+  color: var(--accent-deep);
+}
+
+.member-list {
+  display: grid;
+  gap: 2.4rem;
+}
+
+.member-card {
+  display: grid;
+  grid-template-columns: minmax(0, 220px) 1fr;
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.member-photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: var(--bg-warm);
+}
+
+.member-name {
+  margin: 0.35rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.member-timeline {
+  list-style: none;
+  margin: 1.1rem 0 0;
+  padding: 0;
+}
+
+.member-timeline li {
+  display: grid;
+  grid-template-columns: 3.4rem 1fr;
+  gap: 0.8rem;
+  padding: 0.45rem 0;
+  border-top: 1px dotted var(--line);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.member-timeline span {
+  font-family: var(--font-en);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--accent-deep);
+}
+
+@media (max-width: 720px) {
+  .company-profile > div,
+  .member-card {
+    grid-template-columns: 1fr;
+  }
+}
+
 .form-grid {
   display: grid;
   gap: 1rem;
