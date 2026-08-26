@@ -1261,16 +1261,7 @@ h2 {
 
 .member-card {
   display: grid;
-  grid-template-columns: minmax(0, 220px) 1fr;
-  gap: 1.4rem;
-  align-items: start;
-}
-
-.member-photo {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  background: var(--bg-warm);
+  gap: 0.2rem;
 }
 
 .member-name {
@@ -1305,8 +1296,7 @@ h2 {
 }
 
 @media (max-width: 720px) {
-  .company-profile > div,
-  .member-card {
+  .company-profile > div {
     grid-template-columns: 1fr;
   }
 }
