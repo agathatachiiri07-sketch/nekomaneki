@@ -1,0 +1,15 @@
+---
+description: Use the installed Stripe plugin when adding or changing payments, Checkout, webhooks, billing, or Stripe API code.
+alwaysApply: false
+---
+
+This project includes the official Stripe Cursor plugin.
+
+When the task involves payments, Checkout, PaymentIntents, subscriptions, webhooks, Connect, Stripe Tax, or Stripe API/SDK usage:
+
+1. Follow `.agents/skills/stripe-best-practices/SKILL.md` and its references.
+2. Look up Stripe docs with `.agents/skills/stripe-docs/SKILL.md` instead of guessing API shapes.
+3. Prefer Checkout Sessions for one-time product purchases on this static storefront.
+4. Never commit secret keys. Use restricted keys (`rk_`) in `STRIPE_API_KEY` and webhook signature verification.
+5. Use the Stripe Ruby SDK from the Gemfile (`gem "stripe", "~> 19.6"`). Instantiate `Stripe::StripeClient` via `Nekomaneki::Payments.client` — do not set `Stripe.api_key`.
+6. Use the Stripe MCP server at `https://mcp.stripe.com` when account-specific data is needed (after the user authenticates).

@@ -1,0 +1,7 @@
+{
+  "name": "stripe",
+  "marketplace": "https://cursor.com/marketplace/stripe/stripe",
+  "repository": "https://github.com/stripe/ai",
+  "path": "providers/cursor/plugin",
+  "version": "0.6.3"
+}
