@@ -1,0 +1,21 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bigdecimal (4.1.2)
+    logger (1.7.0)
+    stripe (19.6.1)
+      bigdecimal
+      logger
+
+PLATFORMS
+  ruby
+  x86_64-linux-gnu
+
+DEPENDENCIES
+  stripe (~> 19.6)
+
+RUBY VERSION
+   ruby 3.2.3p157
+
+BUNDLED WITH
+   2.4.20
